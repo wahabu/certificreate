@@ -7,10 +7,7 @@ there is a single source of truth.
 
 ## What this is
 
-**Certificreate** is a freshly scaffolded Next.js app.
-
-> TODO: Fill in the product purpose in `blueprint/project-plan.md`, then run
-> `/overview` or `$overview` to generate the project overview.
+**Certificreate** is a local-first certificate creation tool built with Next.js.
 
 This project is built with the **AI Blueprint**, a workflow layer, not an
 app skeleton. To start a new project, scaffold the app first in an empty folder

@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  experimental: {
+    useTypeScriptCli: false,
+  },
 };
 
 export default nextConfig;

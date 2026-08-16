@@ -7,4 +7,16 @@
 > finding is `open` or `fixed`, then archives resolved findings with the work
 > and resets this file.
 
-_No findings recorded. `/audit` appends findings here when it finds them._
+### F-05 [P3] open - Coding standards retain completed onboarding TODOs
+
+**File:** `blueprint/context/coding-standards.md:6`,
+`blueprint/context/coding-standards.md:80`
+**Found:** 2026-08-14 by `/audit` (scope: current)
+**Why it matters:** The standards still instruct the workflow to choose product
+data, storage, auth, validation, and deployment decisions, but those decisions
+are already documented in `blueprint/project-plan.md`. This leaves the active
+coding guidance looking unfinished and can cause unnecessary planning work in a
+future session.
+**Suggested fix:** Replace the onboarding TODOs with the selected v1 decisions,
+or remove them if the generic standards remain sufficient.
+**Resolution:**

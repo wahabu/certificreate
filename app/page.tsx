@@ -1,69 +1,118 @@
-import Image from "next/image";
+import { BlackBorderCertificate } from "@/components/certificate/BlackBorderCertificate";
+import {
+  BLACK_BORDER_THEME,
+  DEFAULT_CERTIFICATE_DRAFT,
+} from "@/types/certificate";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex min-h-screen flex-col bg-page-bg text-text-main lg:flex-row">
+      <aside className="w-full border-b border-[var(--border-subtle)] bg-surface-1 lg:min-h-screen lg:w-[var(--sidebar-width)] lg:shrink-0 lg:border-b-0 lg:border-r">
+        <div className="flex h-full flex-col px-5 py-5 sm:px-7 lg:px-6">
+          <header className="flex items-center gap-3 border-b border-[var(--border-subtle)] pb-5">
+            <div className="grid size-10 place-items-center rounded-md bg-accent text-lg font-bold text-white">
+              C
+            </div>
+            <div>
+              <p className="text-sm font-semibold tracking-tight text-text-strong">
+                Certificreate
+              </p>
+              <p className="mt-0.5 text-xs text-text-muted">
+                Local certificate studio
+              </p>
+            </div>
+          </header>
+
+          <section className="border-b border-[var(--border-subtle)] py-6">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  Template
+                </p>
+                <h2 className="mt-2 text-base font-semibold text-text-strong">
+                  Black Border
+                </h2>
+              </div>
+              <span className="rounded-full border border-[var(--border-strong)] bg-[var(--accent-soft)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#8fc2e1]">
+                Active
+              </span>
+            </div>
+            <p className="mt-3 max-w-xs text-sm leading-6 text-text-muted">
+              Formal landscape certificate with blue double border and classic serif type.
+            </p>
+          </section>
+
+          <section className="border-b border-[var(--border-subtle)] py-6">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+              Certificate details
+            </p>
+            <dl className="mt-4 grid gap-3 text-sm">
+              <div className="flex items-start justify-between gap-4">
+                <dt className="text-text-muted">Recipient</dt>
+                <dd className="text-right font-medium text-text-main">
+                  {DEFAULT_CERTIFICATE_DRAFT.recipientName}
+                </dd>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <dt className="text-text-muted">Course</dt>
+                <dd className="max-w-[12rem] text-right font-medium text-text-main">
+                  {DEFAULT_CERTIFICATE_DRAFT.courseTitle}
+                </dd>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <dt className="text-text-muted">Instructor</dt>
+                <dd className="text-right font-medium text-text-main">
+                  {DEFAULT_CERTIFICATE_DRAFT.instructorName}
+                </dd>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <dt className="text-text-muted">Issue date</dt>
+                <dd className="text-right font-medium text-text-main">
+                  {DEFAULT_CERTIFICATE_DRAFT.issueDate}
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section className="mt-auto hidden pt-6 lg:block">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-text-muted">Theme</span>
+              <span className="flex items-center gap-2 text-text-main">
+                <span className="size-2 rounded-full bg-certificate-blue" />
+                Certificate blue
+              </span>
+            </div>
+          </section>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </aside>
+
+      <section className="min-w-0 flex-1 bg-[var(--page-bg-soft)]">
+        <div className="mx-auto flex min-h-full w-full max-w-[var(--preview-max)] flex-col px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
+          <header className="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--border-subtle)] pb-5">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Certificate preview
+              </p>
+              <h1 className="mt-2 text-xl font-semibold tracking-tight text-text-strong sm:text-2xl">
+                Black Border certificate
+              </h1>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-text-muted">
+              <span className="size-2 rounded-full bg-[var(--success)]" />
+              Preview ready
+            </div>
+          </header>
+
+          <div className="flex flex-1 items-center py-8 sm:py-12">
+            <div className="w-full rounded-lg border border-[var(--border-subtle)] bg-surface-1 p-3 shadow-[var(--shadow-certificate)] sm:p-5">
+              <BlackBorderCertificate
+                draft={DEFAULT_CERTIFICATE_DRAFT}
+                theme={BLACK_BORDER_THEME}
+              />
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
