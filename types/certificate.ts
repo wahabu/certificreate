@@ -26,8 +26,10 @@ export const BLACK_BORDER_THEME: CertificateTheme = {
   accentColor: "#4389ba",
   textColor: "#080808",
   backgroundColor: "#ffffff",
-  fontFamilySerif: 'Georgia, "Times New Roman", Times, serif',
-  fontFamilySans: '"Helvetica Neue", Arial, sans-serif',
+  fontFamilySerif:
+    'var(--font-certificate-serif-loaded), Georgia, "Times New Roman", Times, serif',
+  fontFamilySans:
+    'var(--font-certificate-sans-loaded), "Helvetica Neue", Arial, sans-serif',
 };
 
 export const DEFAULT_CERTIFICATE_DRAFT: CertificateDraft = {

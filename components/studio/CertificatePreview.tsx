@@ -1,4 +1,5 @@
 import { BlackBorderCertificate } from "@/components/certificate/BlackBorderCertificate";
+import { DownloadPngButton } from "@/components/studio/DownloadPngButton";
 import type { CertificateDraft } from "@/types/certificate";
 
 type CertificatePreviewProps = {
@@ -23,9 +24,12 @@ export function CertificatePreview({ draft }: CertificatePreviewProps) {
             Black Border certificate
           </h2>
         </div>
-        <div className="flex items-center gap-2 text-xs text-text-muted">
-          <span className="size-2 rounded-full bg-[var(--success)]" />
-          Updating live
+        <div className="flex flex-wrap items-center justify-end gap-4">
+          <div className="flex items-center gap-2 text-xs text-text-muted">
+            <span className="size-2 rounded-full bg-[var(--success)]" />
+            Updating live
+          </div>
+          <DownloadPngButton draft={draft} />
         </div>
       </header>
 
