@@ -85,16 +85,27 @@ export function BlackBorderCertificate({
               unoptimized
             />
           ) : (
-            <div className={styles.logoMark} aria-hidden="true">
-              <div className={styles.logoDots}>
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div>
-            </div>
+            <svg
+              className={styles.logoMark}
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="42.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3.5"
+              />
+              <circle cx="31.5" cy="31.5" r="6.5" fill="currentColor" />
+              <circle cx="50" cy="31.5" r="6.5" fill="currentColor" />
+              <circle cx="68.5" cy="31.5" r="6.5" fill="currentColor" />
+              <circle cx="50" cy="50" r="6.5" fill="currentColor" />
+              <circle cx="50" cy="68.5" r="6.5" fill="currentColor" />
+              <circle cx="68.5" cy="68.5" r="6.5" fill="currentColor" />
+            </svg>
           )}
 
           <div className={styles.dateBlock}>

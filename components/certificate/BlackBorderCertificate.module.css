@@ -209,41 +209,23 @@
 
 .logoMark,
 .logoImage {
+  --logo-size: clamp(3.25rem, 8.8cqw, 8.25rem);
+
   justify-self: center;
-  width: clamp(3.25rem, 8.8cqw, 8.25rem);
-  aspect-ratio: 1;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
 }
 
 .logoMark {
-  display: grid;
-  place-items: center;
-  border: 5px solid var(--certificate-accent);
-  border-radius: 999px;
+  display: block;
   color: var(--certificate-primary);
 }
 
 .logoImage {
   display: block;
   object-fit: contain;
-}
-
-.logoDots {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  width: 50%;
-}
-
-.logoDots span {
-  width: 16px;
-  aspect-ratio: 1;
-  border-radius: 999px;
-  background: currentColor;
-}
-
-.logoDots span:nth-child(4),
-.logoDots span:nth-child(5) {
-  grid-column: 2;
 }
 
 @media (max-width: 520px) {
@@ -317,18 +299,6 @@
 
   .logoMark,
   .logoImage {
-    width: clamp(2.25rem, 8.8cqw, 8.25rem);
-  }
-
-  .logoMark {
-    border-width: 3px;
-  }
-
-  .logoDots {
-    gap: 3px;
-  }
-
-  .logoDots span {
-    width: 8px;
+    --logo-size: clamp(2.25rem, 8.8cqw, 8.25rem);
   }
 }
