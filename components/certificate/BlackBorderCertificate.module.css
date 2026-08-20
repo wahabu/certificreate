@@ -177,7 +177,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: end;
   gap: 7%;
   margin-top: auto;
@@ -186,6 +186,7 @@
 .signatureBlock,
 .dateBlock {
   display: grid;
+  width: 100%;
   min-width: 0;
   gap: var(--space-2, 8px);
   align-items: end;
@@ -208,6 +209,7 @@
 
 .logoMark,
 .logoImage {
+  justify-self: center;
   width: clamp(3.25rem, 8.8cqw, 8.25rem);
   aspect-ratio: 1;
 }
