@@ -109,10 +109,11 @@ This project uses `npm` with `package-lock.json`.
 - Build: `npm run build` (uses Next.js webpack build path)
 - Production server: `npm run start`
 - Lint: `npm run lint`
+- Test: `npm test`
+- Test watch: `npm run test:watch`
 
-No `test`, `typecheck`, or `verify` command is configured yet. Testing is opt-in:
-run `/tests` or `$tests` to add the stack-native unit test runner, and run `/ci`
-or `$ci` when you want a combined Verify command and automatic GitHub checks.
+No `typecheck` or `verify` command is configured yet. Run `/ci` or `$ci` when
+you want a combined Verify command and automatic GitHub checks.
 
 ## Stack Notes
 
